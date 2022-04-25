@@ -1,10 +1,29 @@
-# Welcome to your Bit Workspace
+# Welcome to the KiloBit workspace
 
 To get started straight away run `bit start` and open [localhost:3000](http://localhost:3000). It may take a while to build the first time you run this command as it is building the whole User Interface for your development environment.
 
 ```bash
 bit start
 ```
+
+## What we build here
+
+This is a bit component registry where we build reuseable web components using styled components and styled system. The purpose is to achieve
+a best practice approach for component users that match the methodology of native base but does not require the use of `react-native-web`
+as a mediary between native component primitive and web primitive elements.
+
+## What you can do with these components
+
+These components aim to be used in NextJS and ReactJS projects with styled components support. All of the styling should be done through props.
+These components, once published to https://bit.cloud/kilo-lab/web-design should be importable individually on a case by case basis. No need to require importing a whole library to use one or two components.
+
+The main focus of the components included on this collection are as follows:
+
+- formik coupled user input components
+- frequently used formik hooks and utilities
+- frequently use redux hooks and utilities
+- frequently used layout components
+- frequently used visual components
 
 ## What's included
 
