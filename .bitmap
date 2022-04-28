@@ -23,7 +23,7 @@
     },
     "header": {
         "scope": "kilo-lab.web-design",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "web-design/header"
     },

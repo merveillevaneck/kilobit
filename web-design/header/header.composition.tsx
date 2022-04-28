@@ -67,7 +67,7 @@ export const HeaderWithTitle = () => {
 export const CustomHeader = () => {
   return (
     <Page>
-      <Header
+      <Header 
         LeftElement={<Button onClick={() => alert('left clicked')}>left</Button>}
         title={<Title>something</Title>}
         RightElement={<Button onClick={() => alert('right clicked')}>right</Button>}

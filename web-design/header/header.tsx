@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import {
+  position,
   display,
   layout,
   flexbox,
@@ -15,11 +16,13 @@ import {
   BorderProps,
   BackgroundProps,
   DisplayProps,
+  PositionProps,
 } from 'styled-system';
 
 export const DEFAULT_HEADER_HEIGHT = 60;
 
 export const HeaderContainer = styled.div(
+  position,
   layout,
   flexbox,
   color,
@@ -39,6 +42,7 @@ export type StyleProps =
   & BackgroundProps
   & BorderProps
   & DisplayProps
+  & PositionProps
 
 export type HeaderProps = {
   RightElement?: React.ReactElement;
