@@ -33,5 +33,11 @@
         "mainFile": "index.ts",
         "rootDir": "web-design/title"
     },
+    "use-device-type": {
+        "scope": "kilo-lab.web-design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/use-device-type"
+    },
     "$schema-version": "14.9.0"
 }
