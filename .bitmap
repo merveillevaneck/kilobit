@@ -21,6 +21,18 @@
         "mainFile": "index.ts",
         "rootDir": "web-design/button"
     },
+    "compositions": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/compositions",
+        "config": {
+            "teambit.harmony/node": {},
+            "teambit.envs/envs": {
+                "env": "teambit.harmony/node"
+            }
+        }
+    },
     "header": {
         "scope": "kilo-lab.web-design",
         "version": "0.0.3",
@@ -32,6 +44,18 @@
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "web-design/title"
+    },
+    "title-graphic": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/title-graphic",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
     },
     "use-device-type": {
         "scope": "kilo-lab.web-design",
