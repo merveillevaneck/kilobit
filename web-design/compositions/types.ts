@@ -28,4 +28,19 @@ export interface ViewProps extends
   children?: React.ReactNode;
 }
 
-export interface TextProps extends ViewProps {}
+export interface ButtonProps extends
+  SpaceProps,
+  ColorProps,
+  LayoutProps,
+  FlexboxProps,
+  GridProps,
+  BackgroundProps,
+  BorderProps,
+  PositionProps,
+  ShadowProps,
+  TypographyProps,
+  Omit<HTMLAttributes<HTMLButtonElement>, 'color' | 'title'> {
+  as?: React.ElementType;
+  children?: React.ReactNode;
+}
+export interface TextProps extends ViewProps { }

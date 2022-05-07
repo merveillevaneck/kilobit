@@ -51,7 +51,8 @@
         "eslint-plugin-mdx": "1.15.0",
         "eslint-plugin-react": "7.25.1",
         "react-hooks": "1.0.1",
-        "react-web-vector-icons": "1.0.2",
+        "react-icons": "4.3.1",
+        "react-is": "18.1.0",
         "styled-components": "5.3.5",
         "styled-system": "5.1.5"
       },

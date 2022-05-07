@@ -10,10 +10,11 @@ import {
   shadow,
   typography,
   compose,
+  system,
 } from 'styled-system';
 import styled from 'styled-components';
 
-import { ViewProps } from './types';
+import { ViewProps, TextProps } from './types';
 
 export const view = compose(
   space,
@@ -28,9 +29,10 @@ export const view = compose(
   typography,
 );
 
-export const text = view;
+export const text = compose(view);
 
-export const View = styled.div<ViewProps>(view);
+export const View = styled.div<ViewProps>({ fontFamily: 'Helvetica' }, view);
+export const Text = styled.p<TextProps>({ fontFamily: 'Helvetica' }, text);
 
 export * from './types';
 

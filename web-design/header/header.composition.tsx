@@ -1,19 +1,17 @@
 import React from 'react';
-import { Header } from './header';
 import styled from 'styled-components';
+import { Header } from './header';
 import {Button} from '@kilo-lab/web-design.button';
+import {Title} from '@kilo-lab/web-design.title';
+import {View} from '@kilo-lab/web-design.compositions';
+import { IoMenuOutline, IoLogOutOutline } from 'react-icons/io5';
 
-const Page = styled.div`
+const Page = styled(View)`
   width: 100%;
-  height: 150px;
-  min-width: 250px;
-  margin: 0px 5px 0px 0px;
-`;
-
-const Title = styled.div`
-  font-size: 24px;
-  color: white;
-  margin: 0px 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 /**
@@ -23,8 +21,16 @@ const Title = styled.div`
 export const BasicHeader = () => {
   return (
     <Page>
-      <Header>
-        <Title>
+      <Header
+        LeftElement={
+          <IoMenuOutline
+            size={30}
+            style={{ cursor: 'pointer', color: 'white', marginRight: '10px'}}
+            onClick={() => alert('menu clicked!')}
+          />
+        }
+        borderRadius="5px">
+        <Title color="white">
           hello world!
         </Title>
       </Header>
@@ -32,23 +38,19 @@ export const BasicHeader = () => {
   );
 }
 
-export const LeftElement = () => {
-  return (
-    <Page>
-      <Header LeftElement={<Button onClick={() => alert('clicked')}>menu</Button>}>
-        <Title>
-          hello world!
-        </Title>
-      </Header>
-    </Page>
-  )
-}
-
 export const RightElement = () => {
   return (
     <Page>
-      <Header RightElement={<Button onClick={() => alert('clicked')}>menu</Button>}>
-        <Title>
+      <Header
+        RightElement={
+          <IoMenuOutline
+            size={30}
+            style={{ cursor: 'pointer', color: 'white', marginLeft: '10px'}}
+            onClick={() => alert('menu clicked!')}
+          />
+        }
+        borderRadius="5px">
+        <Title color="white">
           hello world!
         </Title>
       </Header>
@@ -59,7 +61,7 @@ export const RightElement = () => {
 export const HeaderWithTitle = () => {
   return (
     <Page>
-      <Header title={<Title>hello world!</Title>} />
+      <Header borderRadius="10px" title={<Title color="white">hello world!</Title>} />
     </Page>
   )
 }
@@ -67,12 +69,25 @@ export const HeaderWithTitle = () => {
 export const CustomHeader = () => {
   return (
     <Page>
-      <Header 
-        LeftElement={<Button onClick={() => alert('left clicked')}>left</Button>}
-        title={<Title>something</Title>}
-        RightElement={<Button onClick={() => alert('right clicked')}>right</Button>}
+      <Header
+        borderRadius="10px"
+        LeftElement={
+          <IoMenuOutline
+            size={30}
+            style={{ cursor: 'pointer', color: 'white', marginLeft: '10px'}}
+            onClick={() => alert('menu clicked!')}
+          />
+        }
+        title={<Title margin="0px" marginLeft="10px" color="white">something</Title>}
+        RightElement={
+          <IoLogOutOutline
+            onClick={() => alert('log out clicked!')}
+            size={30}
+            style={{ cursor: 'pointer', color: 'white', marginLeft: '10px'}}
+          />
+        }
       >
-        <Title>
+        <Title color="white" margin="0px" marginLeft="10px">
           else
         </Title>
       </Header>

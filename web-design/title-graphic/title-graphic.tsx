@@ -26,14 +26,13 @@ export const TitleGraphic: React.FC<TitleGraphicProps> = props => {
   return (
     <TitleGraphicContainer
       width="100%"
-      minHeight="200px"
       display="flex"
       flexDirection="row"
       justifyContent="center"
       alignItems="flex-start"
       {...rest}>
       {image}
-      { title && <Title fontSize={32} color="black" {..._title}>{title}</Title>}
+      { title && <Title fontFamily="Helvetica" fontSize={50} color="black" {..._title}>{title}</Title>}
     </TitleGraphicContainer>
   );
 }

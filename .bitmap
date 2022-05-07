@@ -21,6 +21,18 @@
         "mainFile": "index.ts",
         "rootDir": "web-design/button"
     },
+    "center": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/center",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "compositions": {
         "scope": "",
         "version": "",
@@ -70,8 +82,8 @@
         }
     },
     "use-device-type": {
-        "scope": "kilo-lab.web-design",
-        "version": "0.0.1",
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
         "rootDir": "web-design/use-device-type"
     },
