@@ -1,0 +1,36 @@
+---
+description: 'A hook that generates jss using styled component themes and a callback.'
+---
+
+```ts
+
+const makeStyles = (theme: DefaultTheme) => ({
+  view: {
+    background: theme.colors.background,
+    width: '100px',
+    height: '100px'
+  },
+  title: {
+    color: 'white',
+  }
+})
+
+const StyledComponent = () => {
+  const theme = useTheme();
+  const styles = useStyles(makeStyles);
+  return (
+    <View style={styles.view}>
+      <Title style={styles.color}>KiloLab</Title>
+    </View>
+  )
+}
+
+export const BasicUseStyles = () => {
+  return (
+    <ThemeProvider theme={Theme}>
+      <StyledComponent />
+    </ThemeProvider>
+  );
+};
+
+```

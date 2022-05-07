@@ -87,5 +87,17 @@
         "mainFile": "index.ts",
         "rootDir": "web-design/use-device-type"
     },
+    "use-styles": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/use-styles",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "$schema-version": "14.9.0"
 }
