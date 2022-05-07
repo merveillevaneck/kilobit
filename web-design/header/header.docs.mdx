@@ -3,11 +3,29 @@ description: A Header component.
 ---
 
 import { Header } from './header';
+import {Title} from '@kilo-lab/web-design.title';
+import { IoMenuOutline, IoLogOutOutline } from 'react-icons/io5';
 
 A default header component that takes a left and right element. This component is stylable through
 props following the styled-system conventions.
 
 ### Component usage
-```js live
-<Header color="white" borderRadius="5px">Hello world!</Header>
+```ts live
+<Header
+  color="white"
+  borderRadius="5px"
+  title={<Title>Header</Title>}
+  LeftElement={
+    <IoMenuOutline
+      size={30}
+      style={{ marginRight: '10px' }}
+    />
+  }
+  RightElement={
+    <IoLogOutOutline
+      size={30}
+      style={{ marginLeft: '5px' }}
+    />
+  }
+/>
 ```
