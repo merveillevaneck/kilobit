@@ -1,0 +1,27 @@
+import 'styled-components';
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    borderRadius: number;
+    headerHeight: number;
+    headingSize: number;
+    titleSize: number;
+    bubbleShadow: string;
+
+    colors: {
+      primary: string;
+      secondary: string;
+      text: string;
+      textLight: string;
+      background: string;
+      backgroundLight: string;
+      error: string;
+      blue: string;
+      confirmBackground: string;
+      backgroundDark: string;
+      input: string;
+      inputLabel: string;
+      iconLight: string;
+    }
+  }
+}
