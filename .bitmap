@@ -39,6 +39,18 @@
         "mainFile": "index.ts",
         "rootDir": "web-design/header"
     },
+    "text": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "web-design/text",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "title": {
         "scope": "kilo-lab.web-design",
         "version": "0.0.1",

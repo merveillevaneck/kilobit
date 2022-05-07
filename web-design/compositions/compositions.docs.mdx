@@ -3,8 +3,27 @@ labels: ['module']
 description: 'A general purpose node module'
 ---
 
-API:
+import {view, ViewProps, View} from './compositions';
 
 ```ts
-function compositions(): string;
+import {view, ViewProps} from './compositions';
+const View = styled.div<ViewProps>(view);
 ```
+
+```ts live
+<View
+  background="rgba(150, 30, 75, 0.4)"
+  borderRadius="10px"
+  width="100px"
+  height="100px"
+  margin="20px"
+  border="1px dashed rgba(150, 30, 75, 0.9)"
+  color="white"
+  display="flex"
+  justifyContent="center"
+  alignItems="center"
+>
+  <span>View</span>
+</View>
+```
+

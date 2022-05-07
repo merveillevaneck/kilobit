@@ -41,6 +41,7 @@
       "dependencies": {
         "@teambit/eslint-config-bit-react": "~0.0.367",
         "@testing-library/react-hooks": "8.0.0",
+        "@types/styled-components": "5.1.25",
         "@types/styled-system": "5.1.15",
         "@typescript-eslint/eslint-plugin": "4.29.3",
         "eslint-import-resolver-node": "0.3.6",

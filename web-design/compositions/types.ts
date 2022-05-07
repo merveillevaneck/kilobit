@@ -24,7 +24,8 @@ export interface ViewProps extends
   ShadowProps,
   TypographyProps,
   Omit<HTMLAttributes<HTMLDivElement>, 'color' | 'title'> {
-  
+  as?: React.ElementType;
+  children?: React.ReactNode;
 }
 
 export interface TextProps extends ViewProps {}

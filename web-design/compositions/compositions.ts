@@ -11,8 +11,11 @@ import {
   typography,
   compose,
 } from 'styled-system';
+import styled from 'styled-components';
 
-export const viewProps = compose(
+import { ViewProps } from './types';
+
+export const view = compose(
   space,
   color,
   layout,
@@ -25,8 +28,9 @@ export const viewProps = compose(
   typography,
 );
 
-export const textProps = compose(
-  viewProps
-);
+export const text = view;
+
+export const View = styled.div<ViewProps>(view);
 
 export * from './types';
+

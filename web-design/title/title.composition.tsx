@@ -10,7 +10,7 @@ export const BasicTitle = () => {
 export const CustomTitle = () => {
   return (
     <Title fontSize="16px" color="rgba(255, 67, 135, 0.9)" fontFamily="Sans">
-      stylable title
+      Supporting Massive Ideas
     </Title>
   )
 }

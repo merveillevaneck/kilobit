@@ -2,10 +2,10 @@ import React from 'react';
 import {Title, TitleProps} from '@kilo-lab/web-design.title';
 import styled from 'styled-components';
 
-import {viewProps, ViewProps} from '@kilo-lab/web-design.compositions';
+import {view, ViewProps} from '@kilo-lab/web-design.compositions';
 
-export const TitleGraphicContainer = styled.div(
-  viewProps,
+export const TitleGraphicContainer = styled.div<Omit<ViewProps, 'color'>>(
+  view,
 );
 
 export interface TitleGraphicProps extends ViewProps {
