@@ -1,0 +1,25 @@
+---
+description: A TitleGraphic component.
+---
+import {Title} from '@kilo-lab/web-design.title';
+import { TitleGraphic } from './title-graphic';
+
+A component that does something special and renders text in a div.
+
+
+### Render hello world!
+
+```ts live
+<TitleGraphic
+  image={
+    <img
+      alt="kilolab-title-graphic"
+      src="https://kilolab-next-template.netlify.app/earth_spin.svg"
+      width="200px"
+      height="200px"
+    />
+  }
+  title="Supporting Massive Ideas"
+  _title={{ maxWidth: "100px", padding: 0, margin: "0px 0px 0px -50px", fontSize: "25px", color: "rgba(100, 50, 200, 0.8)"}}
+/>
+```
