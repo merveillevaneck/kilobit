@@ -1,21 +1,34 @@
 import React, {useMemo} from 'react';
-import styled from 'styled-components';
-import {View, ViewProps} from '@kilo-lab/web-design.compositions';
+import styled, {StyledProps} from 'styled-components';
+import {View, ViewProps, animation} from '@kilo-lab/web-design.compositions';
 
-export const AnimatedBubble = styled(View)<ViewProps>`
-  animation: breathing 5s ease-in-out infinite normal;
+interface AnimationProps {
+  name?: string;
+  duration?: string;
+  timingFunction?: string;
+  delay?: string;
+  iterationCount?: string;
+  direction?: string;
+  fillMode?: string;
+  playState?: string;
+}
+
+interface AnimatedBubbleProps extends ViewProps, AnimationProps {}
+
+export const AnimatedBubble = styled(View)<ViewProps & {timing: string}>`
+  animation: 
+  breathing 
+  4s
+  ease-in-out
+  infinite normal;
   @-webkit-keyframes breathing {
   0% {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
-  25% {
-    -webkit-transform: scale(1);
+  50% {
+    -webkit-tranform: scale(1);
     transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
   }
   100% {
     -webkit-transform: scale(0.9);
@@ -26,22 +39,17 @@ export const AnimatedBubble = styled(View)<ViewProps>`
   0% {
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
-  25% {
-    -webkit-transform: scale(1);
+  50% {
+    -webkit-tranform: scale(1);
     -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 }
 `

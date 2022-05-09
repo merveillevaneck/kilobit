@@ -43,4 +43,7 @@ export interface ButtonProps extends
   as?: React.ElementType;
   children?: React.ReactNode;
 }
+
+export * from './animation/types';
+
 export interface TextProps extends ViewProps { }
