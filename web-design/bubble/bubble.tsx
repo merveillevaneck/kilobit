@@ -1,8 +1,39 @@
 import React, {useMemo} from 'react';
 import styled from 'styled-components';
-import {View, ViewProps} from '@kilo-lab/web-design.compositions';
+import {
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+  BackgroundProps,
+  ZIndexProps,
+  ShadowProps,
+  OpacityProps,
+  LayoutProps,
+  SpaceProps,
+  position,
+  background,
+  zIndex,
+  shadow,
+  opacity,
+  layout,
+  flexbox,
+  border,
+  space,
+} from 'styled-system';
 
-export const AnimatedBubble = styled(View)<ViewProps>`
+export const BubbleBase = styled.div(
+  position,
+  background,
+  zIndex,
+  shadow,
+  opacity,
+  layout,
+  flexbox,
+  border,
+  space,
+);
+
+export const AnimatedBubble = styled(BubbleBase)`
   animation: breathing 5s ease-in-out infinite normal;
   @-webkit-keyframes breathing {
   0% {
@@ -47,7 +78,15 @@ export const AnimatedBubble = styled(View)<ViewProps>`
 `
 
 export interface BubbleProps extends 
-  Omit<ViewProps, 'width' | 'height'> {
+  FlexboxProps,
+  Omit<LayoutProps, 'width' | 'height'>,
+  PositionProps,
+  BackgroundProps,
+  ZIndexProps,
+  BorderProps,
+  ShadowProps,
+  OpacityProps,
+  SpaceProps {
   style?: React.CSSProperties;
   breathe?: boolean;
   radius?: number;
@@ -87,7 +126,7 @@ export const Bubble: React.FC<BubbleProps> = props => {
   } = useBubbleDimensions(radius);
 
   if (!breathe) return (
-    <View
+    <BubbleBase
       style={style}
       width={width}
       height={height}
@@ -98,7 +137,7 @@ export const Bubble: React.FC<BubbleProps> = props => {
       {...rest}
     >
       {children}
-    </View>
+    </BubbleBase>
   )
 
   return (

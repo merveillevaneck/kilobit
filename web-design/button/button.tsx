@@ -1,25 +1,62 @@
 import React from 'react'
 import styled from 'styled-components';
-import {view, ButtonProps as ButtonStyleProps } from '@kilo-lab/web-design.compositions';
+import {
+  layout,
+  space,
+  color,
+  background,
+  display,
+  flexbox,
+  border,
+  position,
+  shadow,
+  LayoutProps,
+  SpaceProps,
+  ColorProps,
+  BackgroundProps,
+  FlexboxProps,
+  BorderProps,
+  PositionProps,
+  ShadowProps,
+} from 'styled-system';
 
-const ButtonContainer = styled.button<ButtonStyleProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const DefaultButton = styled.button`
   &:hover {
     opacity: 1;
     cursor: pointer;
   }
   box-shadow: none;
-  ${view}
 `;
-export interface ButtonProps extends ButtonStyleProps {
+
+const ButtonContainer = styled(DefaultButton)(
+  layout,
+  space,
+  color,
+  background,
+  display,
+  flexbox,
+  border,
+  position,
+  shadow,
+);
+
+export type StyleProps = 
+  LayoutProps
+  & SpaceProps
+  & ColorProps
+  & BackgroundProps
+  & FlexboxProps
+  & BorderProps
+  & PositionProps
+  & ShadowProps
+
+
+export interface ButtonProps extends StyleProps, Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
   children?: React.ReactNode;
-  /** boolean prop that can be used to render a default loading state */
   loading?: boolean;
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = props => {
 
   const {
     children,
