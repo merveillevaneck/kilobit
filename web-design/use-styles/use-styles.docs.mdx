@@ -4,11 +4,6 @@ description: 'A hook that generates jss using styled component themes and a call
 
 ```ts
 
-/** import your theme here */
-import {Theme} from './Theme';
-
-import {DefaultTheme, useTheme, ThemeProvider} from 'styled-components';
-
 const makeStyles = (theme: DefaultTheme) => ({
   view: {
     background: theme.colors.background,
@@ -32,7 +27,6 @@ const StyledComponent = () => {
 
 export const BasicUseStyles = () => {
   return (
-    /** Pass your theme object to the styled components theme provider! */
     <ThemeProvider theme={Theme}>
       <StyledComponent />
     </ThemeProvider>
