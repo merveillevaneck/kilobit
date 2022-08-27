@@ -11,8 +11,9 @@ export function BasicView() {
     display="flex"
     flexDirection="row"
     justifyContent="center"
-    alignItems="center">
-    <Text margin="5px" color="white" fontSize="18px" textAlign="center">KiloLab</Text>
+    alignItems="center"
+  >
+    <Text color="white" fontSize="18px" textAlign="center">KiloLab</Text>
   </View>
 }
 
@@ -22,7 +23,8 @@ export function BasicText() {
     display="flex"
     flexDirection="row"
     justifyContent="center"
-    alignItems="center">
+    alignItems="center"
+  >
     <Text color="rgba(100, 50, 150, 0.6)" fontSize="18px" textAlign="center">KiloLab</Text>
   </View>
 }

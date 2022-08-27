@@ -32,7 +32,7 @@ export const Header = (props: HeaderProps) => {
     <HeaderContainer
       width="100%"
       paddingX="10px"
-      backgroundColor="rgba(100, 15, 200, 0.6)"
+      backgroundColor="rgba(15, 125, 50, 0.5)"
       height={height}
       display="flex"
       flexDirection="row"
