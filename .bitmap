@@ -82,8 +82,8 @@
         }
     },
     "use-device-type": {
-        "scope": "kilo-lab.web-design",
-        "version": "0.0.1",
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
         "rootDir": "web-design/use-device-type"
     },
